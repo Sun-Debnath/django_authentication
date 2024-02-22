@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% block body %} 
+
+<h1>welcome to profile</h1>
+<h1>Hello {{user}}</h1>
+
+{% if messages %}
+    {% for m in messages %}
+    <p class="bg-success p-3 text-white">{{m}}</p>
+    {% endfor %}
+    {% endif %}
+    <br/>
+<p><a class="btn btn-info" href="{% url 'passchange' %}">Change Your Password</a>
+<a class="btn btn-warning" href="{% url 'passchange2' %}">Change Your Password without old pass</a></p>
+
+{% endblock %}
